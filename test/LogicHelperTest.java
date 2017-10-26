@@ -15,13 +15,19 @@ public class LogicHelperTest {
     @Test
     public void testInit(){
         char pro[] = logicHelper.getPro();
-        int p = 0;
-        for(int i=0;i<500;i++){
-            System.out.print(pro[i]);
-            p++;
+        String s = String.valueOf(pro);
+        for(int i = 0;i<logicHelper.getPro_len();i++){
+            System.out.println(pro[i]);
         }
+        System.out.println(s);
+        System.out.println("pre_len: "+logicHelper.getPro_len());
         System.out.println();
-        System.out.println("P: "+ --p);
+    }
+
+
+    @Test
+    public void testRun(){
+        logicHelper.run();
     }
 
 }
