@@ -12,67 +12,44 @@ public class DataHelper {
     private String [] txturl = {"dataSource/InitState.txt","dataSource/KeyWordState.txt","dataSource/TransState.txt"};
 
     public DataHelper(){
-        setInitState();
-        setKeyworkState();
-        setTransState();
+        setState(StateStyle.INITSTATE);
+        setState(StateStyle.KEYWORDSTATE);
+        setState(StateStyle.TRANSSTATE);
     }
 
-    private void setInitState(){
+    private void setState(StateStyle stateStyle){
         ArrayList<String> datalist;
         try {
-            datalist = readFile(txturl[0]);
+
+            datalist = readFile(txturl[stateStyle.ordinal()]);
             int data_len = datalist.size();
-            initState = new String[data_len][2];
-            for(int i=0;i<data_len;i++){
-                String string_line = datalist.get(i);
-                String datas_line[] = string_line.split(" ");
-                for (int j=0;j<2;j++){
-                    initState[i][j] = datas_line[j];
-                }
+
+            if(stateStyle == StateStyle.INITSTATE){
+                initState = new String[data_len][2];
+                setStatelist(datalist,initState,data_len,2);
+
+            }else if(stateStyle == StateStyle.KEYWORDSTATE){
+                keyworkState = new String[data_len][2];
+                setStatelist(datalist,keyworkState,data_len,2);
+
+            }else if(stateStyle == StateStyle.TRANSSTATE){
+                transState = new String[data_len][3];
+                setStatelist(datalist,transState,data_len,3);
             }
-        }catch (IOException e){
-            e.printStackTrace();
-        }
 
-
-    }
-
-    private void setKeyworkState(){
-        ArrayList<String> datalist;
-        try {
-            datalist = readFile(txturl[1]);
-            int data_len = datalist.size();
-            keyworkState = new String[data_len][2];
-            for(int i=0;i<data_len;i++){
-                String string_line = datalist.get(i);
-                String datas_line[] = string_line.split(" ");
-                for(int j=0;j<2;j++){
-                    keyworkState[i][j] = datas_line[j];
-                }
-            }
         } catch (IOException e) {
             e.printStackTrace();
         }
 
     }
-
-    private void setTransState(){
-        ArrayList<String> datalist;
-        try {
-            datalist = readFile(txturl[2]);
-            int data_len = datalist.size();
-            transState = new String[data_len][3];
-            for(int i=0;i<data_len;i++){
-                String string_line = datalist.get(i);
-                String datas_line[] = string_line.split(" ");
-                for (int j=0;j<3;j++){
-                    transState[i][j] = datas_line[j];
-                }
+    private void setStatelist(ArrayList<String> data, String[][] list, int len1, int len2){
+        for(int i=0;i<len1;i++){
+            String string_line = data.get(i);
+            String datas_line[] = string_line.split(" ");
+            for(int j=0;j<len2;j++){
+                list[i][j] = datas_line[j];
             }
-        } catch (IOException e) {
-            e.printStackTrace();
         }
-
     }
 
     public ArrayList<String> readFile(String url) throws IOException {
@@ -129,17 +106,4 @@ public class DataHelper {
         }
         return -1;
     }
-
-    public boolean isTerminal(int tag){
-        int initState_nums = initState.length;
-        for(int i=0;i<initState_nums;i++){
-            if(tag == Integer.parseInt(initState[i][1])){
-                return true;
-            }
-        }
-        return false;
-    }
-
-
-
 }

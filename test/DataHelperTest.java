@@ -26,39 +26,30 @@ public class DataHelperTest {
     }
     @Test
     public void testkeyword(){
-        assertEquals(60,dataHelper.isKeyWord("if"));
-        assertEquals(61,dataHelper.isKeyWord("else"));
-        assertEquals(99,dataHelper.isKeyWord("private"));
-        assertEquals(111,dataHelper.isKeyWord("volatile"));
+        assertEquals(4,dataHelper.isKeyWord("abstract"));
+        assertEquals(16,dataHelper.isKeyWord("else"));
+        assertEquals(34,dataHelper.isKeyWord("private"));
+        assertEquals(51,dataHelper.isKeyWord("while"));
         assertEquals(-1,dataHelper.isKeyWord("huh"));
 
     }
 
     @Test
     public void testToken(){
-        assertEquals(10,dataHelper.isToken('+'));
-        assertEquals(35,dataHelper.isToken('\"'));
+        assertEquals(52,dataHelper.isToken('+'));
+        assertEquals(64,dataHelper.isToken('\"'));
         assertEquals(-1,dataHelper.isToken('0'));
     }
 
     @Test
     public void testTrans(){
-        assertEquals(48,dataHelper.transState(24,'='));
-        assertEquals(40,dataHelper.transState(10,'='));
-        assertEquals(54,dataHelper.transState(16,'<'));
-        assertEquals(44,dataHelper.transState(16,'='));
+        assertEquals(79,dataHelper.transState(52,'='));
+        assertEquals(82,dataHelper.transState(55,'='));
+        assertEquals(88,dataHelper.transState(62,'<'));
+        assertEquals(92,dataHelper.transState(72,'='));
         assertEquals(-1,dataHelper.transState(5,'f'));
         assertEquals(-1,dataHelper.transState(10,'<'));
     }
-
-    @Test
-    public void testTerminal(){
-        assertTrue(dataHelper.isTerminal(10));
-        assertTrue(dataHelper.isTerminal(35));
-        assertTrue(dataHelper.isTerminal(23));
-        assertTrue(!dataHelper.isTerminal(44));
-    }
-
 
     private void print(String[][] datalist){
         int len1 = datalist.length;

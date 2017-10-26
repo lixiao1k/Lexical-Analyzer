@@ -2,16 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc830c9b-cb5b-4c18-90f4-dc92f75e9b75" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/result/Output.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/InitState.txt" afterPath="$PROJECT_DIR$/dataSource/InitState.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Input.txt" afterPath="$PROJECT_DIR$/input/Input.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/KeyWordState.txt" afterPath="$PROJECT_DIR$/dataSource/KeyWordState.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/TransState.txt" afterPath="$PROJECT_DIR$/dataSource/TransState.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/StateStyle.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Lexcial Analyzer/DataHelper.class" afterPath="$PROJECT_DIR$/out/production/Lexcial Analyzer/DataHelper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/Lexcial Analyzer/DataHelperTest.class" afterPath="$PROJECT_DIR$/out/test/Lexcial Analyzer/DataHelperTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSource/InitState.txt" afterPath="$PROJECT_DIR$/dataSource/InitState.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSource/TransState.txt" afterPath="$PROJECT_DIR$/dataSource/TransState.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/result/Output.txt" afterPath="$PROJECT_DIR$/result/Output.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataHelper.java" afterPath="$PROJECT_DIR$/src/DataHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LogicHelper.java" afterPath="$PROJECT_DIR$/src/LogicHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/LogicHelperTest.java" afterPath="$PROJECT_DIR$/test/LogicHelperTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/DataHelperTest.java" afterPath="$PROJECT_DIR$/test/DataHelperTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,11 +23,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DataHelper.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DataHelper.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/DataHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-385">
-              <caret line="15" column="26" lean-forward="true" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+            <state relative-caret-position="162">
+              <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -36,21 +35,31 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="StateStyle.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/StateStyle.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="37" lean-forward="true" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="KeyWordState.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dataSource/KeyWordState.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
+            <state relative-caret-position="-24">
               <caret line="22" column="13" lean-forward="true" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LogicHelper.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LogicHelper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LogicHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
-              <caret line="129" column="0" lean-forward="true" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
+            <state relative-caret-position="-1413">
+              <caret line="40" column="9" lean-forward="true" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#4078#4079#0" expanded="true" />
@@ -85,7 +94,7 @@
       <file leaf-file-name="LogicHelperTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/LogicHelperTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
+            <state relative-caret-position="47">
               <caret line="19" column="39" lean-forward="true" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -99,8 +108,8 @@
       <file leaf-file-name="DataHelperTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/DataHelperTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="40">
-              <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+            <state relative-caret-position="810">
+              <caret line="56" column="33" lean-forward="true" selection-start-line="56" selection-start-column="33" selection-end-line="56" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -136,6 +145,7 @@
         <option value="Arquillian JUnit Test Class" />
         <option value="JUnit4 Test Class" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -151,7 +161,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/Lex.java" />
-        <option value="$PROJECT_DIR$/test/DataHelperTest.java" />
         <option value="$PROJECT_DIR$/Input.txt" />
         <option value="$PROJECT_DIR$/TransState.txt" />
         <option value="$PROJECT_DIR$/InitState.txt" />
@@ -159,6 +168,8 @@
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/test/LogicHelperTest.java" />
         <option value="$PROJECT_DIR$/src/LogicHelper.java" />
+        <option value="$PROJECT_DIR$/src/StateStyle.java" />
+        <option value="$PROJECT_DIR$/test/DataHelperTest.java" />
         <option value="$PROJECT_DIR$/src/DataHelper.java" />
       </list>
     </option>
@@ -225,7 +236,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -239,7 +250,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="input" />
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -800,7 +811,7 @@
       <option name="presentableId" value="Default" />
       <updated>1508920053567</updated>
       <workItem from="1508920055608" duration="10304000" />
-      <workItem from="1508983020263" duration="11492000" />
+      <workItem from="1508983020263" duration="13615000" />
     </task>
     <task id="LOCAL-00001" summary="DataHelper makes the preparation.">
       <created>1508943672835</created>
@@ -813,39 +824,39 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="DataHelperTest - 2017.10.26 at 15h 46m 20s.xml">
+    <history-entry file="DataHelperTest - 2017.10.26 at 16h 48m 43s.xml">
       <configuration name="DataHelperTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LogicHelperTest - 2017.10.26 at 15h 46m 27s.xml">
-      <configuration name="LogicHelperTest" configurationId="JUnit" />
+    <history-entry file="DataHelperTest - 2017.10.26 at 16h 49m 17s.xml">
+      <configuration name="DataHelperTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DataHelperTest - 2017.10.26 at 16h 54m 07s.xml">
+      <configuration name="DataHelperTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DataHelperTest - 2017.10.26 at 16h 55m 22s.xml">
+      <configuration name="DataHelperTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DataHelperTest - 2017.10.26 at 16h 55m 59s.xml">
+      <configuration name="DataHelperTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DataHelperTest - 2017.10.26 at 16h 57m 17s.xml">
+      <configuration name="DataHelperTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DataHelperTest - 2017.10.26 at 17h 03m 52s.xml">
+      <configuration name="DataHelperTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="LogicHelperTest - 2017.10.26 at 16h 09m 21s.xml">
       <configuration name="LogicHelperTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LogicHelperTest_testRun - 2017.10.26 at 15h 08m 54s.xml">
-      <configuration name="LogicHelperTest.testRun" configurationId="JUnit" />
+    <history-entry file="LogicHelperTest - 2017.10.26 at 16h 49m 04s.xml">
+      <configuration name="LogicHelperTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LogicHelperTest_testRun - 2017.10.26 at 15h 10m 38s.xml">
-      <configuration name="LogicHelperTest.testRun" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LogicHelperTest_testRun - 2017.10.26 at 15h 33m 30s.xml">
-      <configuration name="LogicHelperTest.testRun" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LogicHelperTest_testRun - 2017.10.26 at 15h 35m 43s.xml">
-      <configuration name="LogicHelperTest.testRun" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LogicHelperTest_testRun - 2017.10.26 at 15h 36m 40s.xml">
-      <configuration name="LogicHelperTest.testRun" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LogicHelperTest_testRun - 2017.10.26 at 15h 37m 10s.xml">
-      <configuration name="LogicHelperTest.testRun" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LogicHelperTest_testRun - 2017.10.26 at 15h 38m 16s.xml">
-      <configuration name="LogicHelperTest.testRun" configurationId="JUnit" />
+    <history-entry file="LogicHelperTest - 2017.10.26 at 17h 03m 58s.xml">
+      <configuration name="LogicHelperTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21796000" />
+    <option name="totallyTimeSpent" value="23919000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="6" />
@@ -1013,14 +1024,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dataSource/KeyWordState.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="22" column="13" lean-forward="true" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/result/Output.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1037,9 +1040,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/DataHelperTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="56" column="33" lean-forward="true" selection-start-line="56" selection-start-column="33" selection-end-line="56" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input/Input.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="18" lean-forward="false" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StateStyle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="37" lean-forward="true" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataSource/KeyWordState.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-24">
+          <caret line="22" column="13" lean-forward="true" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/LogicHelperTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
+        <state relative-caret-position="47">
           <caret line="19" column="39" lean-forward="true" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1049,12 +1086,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/DataHelperTest.java">
+    <entry file="file://$PROJECT_DIR$/src/LogicHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        <state relative-caret-position="-1413">
+          <caret line="40" column="9" lean-forward="true" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#4078#4079#0" expanded="true" />
+            <element signature="e#4104#4105#0" expanded="true" />
+            <element signature="e#4133#4134#0" expanded="true" />
+            <element signature="e#4163#4164#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1067,34 +1108,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/input/Input.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="18" lean-forward="false" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DataHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-385">
-          <caret line="15" column="26" lean-forward="true" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+        <state relative-caret-position="162">
+          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/LogicHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="129" column="0" lean-forward="true" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4078#4079#0" expanded="true" />
-            <element signature="e#4104#4105#0" expanded="true" />
-            <element signature="e#4133#4134#0" expanded="true" />
-            <element signature="e#4163#4164#0" expanded="true" />
           </folding>
         </state>
       </provider>
