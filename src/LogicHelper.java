@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class LogicHelper {
 
     DataHelper dataHelper;
-    private char pro[],token[];//pro数组持有程序，token用于暂存标识符
+    private char pro[],token[];//pro数组持有程序，token用于暂存词素
     private int p = 0, syn = 0, pro_len=0,m;//p是遍历指针，syn持有状态值，pro_len是程序的长度
 
     public LogicHelper(){
