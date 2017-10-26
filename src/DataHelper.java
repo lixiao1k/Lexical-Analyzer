@@ -22,11 +22,11 @@ public class DataHelper {
         try {
             datalist = readFile(txturl[0]);
             int data_len = datalist.size();
-            initState = new String[data_len][3];
+            initState = new String[data_len][2];
             for(int i=0;i<data_len;i++){
                 String string_line = datalist.get(i);
                 String datas_line[] = string_line.split(" ");
-                for (int j=0;j<3;j++){
+                for (int j=0;j<2;j++){
                     initState[i][j] = datas_line[j];
                 }
             }
@@ -61,11 +61,11 @@ public class DataHelper {
         try {
             datalist = readFile(txturl[2]);
             int data_len = datalist.size();
-            transState = new String[data_len][4];
+            transState = new String[data_len][3];
             for(int i=0;i<data_len;i++){
                 String string_line = datalist.get(i);
                 String datas_line[] = string_line.split(" ");
-                for (int j=0;j<4;j++){
+                for (int j=0;j<3;j++){
                     transState[i][j] = datas_line[j];
                 }
             }
