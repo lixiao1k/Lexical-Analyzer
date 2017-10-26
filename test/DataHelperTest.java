@@ -51,6 +51,14 @@ public class DataHelperTest {
         assertEquals(-1,dataHelper.transState(10,'<'));
     }
 
+    @Test
+    public void testTerminal(){
+        assertTrue(dataHelper.isTerminal(10));
+        assertTrue(dataHelper.isTerminal(35));
+        assertTrue(dataHelper.isTerminal(23));
+        assertTrue(!dataHelper.isTerminal(44));
+    }
+
 
     private void print(String[][] datalist){
         int len1 = datalist.length;

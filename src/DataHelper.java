@@ -75,7 +75,7 @@ public class DataHelper {
 
     }
 
-    private ArrayList<String> readFile(String url) throws IOException {
+    public ArrayList<String> readFile(String url) throws IOException {
 
         ArrayList<String> datalist = new ArrayList<>();
 
@@ -130,10 +130,15 @@ public class DataHelper {
         return -1;
     }
 
-
-
-
-
+    public boolean isTerminal(int tag){
+        int initState_nums = initState.length;
+        for(int i=0;i<initState_nums;i++){
+            if(tag == Integer.parseInt(initState[i][1])){
+                return true;
+            }
+        }
+        return false;
+    }
 
 
 
