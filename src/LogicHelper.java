@@ -126,16 +126,34 @@ public class LogicHelper {
             }
         }
     }
+    private void output(FileWriter fileWriter,String style,char[] token){
+        String s = "";
+        s = "<" + style + "," + charToString(token) + ">\n";
+        try {
+            fileWriter.write(s);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        System.out.print(s);
+    }
 
     public void run() throws IOException {
         File resultFile = new File("result/Output.txt");
         FileWriter fileWriter = new FileWriter(resultFile);
         while(p!=pro_len){
             scanner();
-            if(syn >0) {
-                String s = "<" + Integer.toString(syn) + "," + charToString(token) + ">"+"\n";
-                fileWriter.write(s);
-                System.out.print(s);
+            if(syn == 1){
+                output(fileWriter,"ID",token);
+            }else if(syn == 2){
+                output(fileWriter,"DOUBLE",token);
+            }else if(syn == 3){
+                output(fileWriter,"INT",token);
+            }else if(syn >= 4 && syn <= 51){
+                output(fileWriter,"KEYWORD",token);
+            }else if((syn>=64 && syn<=70)||syn == 73||syn==74||syn==77){
+                output(fileWriter,"DELIMITER",token);
+            }else if(syn != -1){
+                output(fileWriter,"OPERATOR",token);
             }else{
                 fileWriter.write("error\n");
                 System.out.println("error");
