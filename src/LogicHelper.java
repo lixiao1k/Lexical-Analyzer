@@ -9,8 +9,8 @@ import java.util.ArrayList;
 public class LogicHelper {
 
     DataHelper dataHelper;
-    private char pro[],token[];
-    private int p = 0, syn = 0, pro_len=0,m;
+    private char pro[],token[];//pro数组持有程序，token用于暂存标识符
+    private int p = 0, syn = 0, pro_len=0,m;//p是遍历指针，syn持有状态值，pro_len是程序的长度
 
     public LogicHelper(){
         dataHelper = new DataHelper();
@@ -58,7 +58,7 @@ public class LogicHelper {
         while((ch == ' ')||(ch == '\n')||(ch == '\t')){
             ch = pro[p++];
         }
-        if((ch >= 'a' && ch<='z')||(ch >= 'A' && ch <= 'Z')){
+        if((ch >= 'a' && ch <= 'z')||(ch >= 'A' && ch <= 'Z')){//判断标识符
             m=0;
             while((ch >= 'a' && ch<='z')||(ch >= 'A' && ch <= 'Z')||(ch >='0' && ch <= '9')){
                 token[m++] = ch;
@@ -70,12 +70,12 @@ public class LogicHelper {
             p--;
             String candidate = charToString(token);
             syn = 1;
-            int tag = dataHelper.isKeyWord(candidate);
+            int tag = dataHelper.isKeyWord(candidate);//判断关键字
             if(tag > 0){
                 syn = tag;
             }
         }
-        else if(ch >= '0' && ch <= '9'){
+        else if(ch >= '0' && ch <= '9'){//判断数字
             m = 0;
             while(ch >= '0' && ch <= '9'){
                 token[m++] = ch;
@@ -84,7 +84,7 @@ public class LogicHelper {
                 }
                 ch = pro[p++];
             }
-            if(ch == '.'){
+            if(ch == '.'){//double
                 token[m++] = ch;
                 ch = pro[p++];
                 while(ch >= '0' && ch <= '9'){
@@ -103,7 +103,7 @@ public class LogicHelper {
         }
         else{
             if(p == pro_len && dataHelper.isToken(ch) == -1){
-                syn = -1;
+                syn = -1;//如果程序结尾不是界符的话，就报错。
                 return;
             }
             m = 0;
@@ -113,7 +113,7 @@ public class LogicHelper {
                 token[m++] = ch;
                 if(p!=pro_len){
                     ch = pro[p++];
-                    int tag1 = dataHelper.transState(tag,ch);
+                    int tag1 = dataHelper.transState(tag,ch);//双目操作符状态转换
                     if(tag1 > 0){
                         syn = tag1;
                         token[m++] = ch;
@@ -124,7 +124,6 @@ public class LogicHelper {
             }else{
                 syn = -1;
             }
-
         }
     }
 

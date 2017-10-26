@@ -5,6 +5,7 @@ import java.util.ArrayList;
  * Created by shelton on 2017/10/25.
  */
 public class DataHelper {
+    //状态数据
     public String initState[][];
     public String keyworkState[][];
     public String transState[][];
@@ -72,7 +73,7 @@ public class DataHelper {
         return datalist;
 
     }
-
+    //判断是否为关键字
     public int isKeyWord(String s){
         int keyword_nums = keyworkState.length;
         for(int i=0;i<keyword_nums;i++){
@@ -82,7 +83,7 @@ public class DataHelper {
         }
         return -1;
     }
-
+    //判断是否为特殊符号
     public int isToken(char c){
         int initState_nums = initState.length;
         for(int i=0;i<initState_nums;i++){
@@ -93,7 +94,7 @@ public class DataHelper {
         }
         return -1;
     }
-
+    //二元符号的状态转换
     public int transState(int state, char ch){
         int transState_nums = transState.length;
         for(int i=0;i<transState_nums;i++){
