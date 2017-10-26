@@ -99,24 +99,46 @@ public class LogicHelper {
                 syn =3;//int
             }
         }
+        else{
+            if(p == pro_len && dataHelper.isToken(ch) == -1){
+                syn = -1;
+                return;
+            }
+            m = 0;
+            int tag = dataHelper.isToken(ch);
+            if(tag > 0){
+                syn = tag;
+                token[m++] = ch;
+                if(p!=pro_len){
+                    ch = pro[p++];
+                    int tag1 = dataHelper.transState(tag,ch);
+                    if(tag1 > 0){
+                        syn = tag1;
+                        token[m++] = ch;
+                    }else{
+                        p--;
+                    }
+                }
+            }else{
+                syn = -1;
+            }
 
+        }
     }
 
     public void run(){
         while(p!=pro_len){
             scanner();
             if(syn >3) {
-                System.out.println(syn);
-                System.out.println(charToString(token));
+                System.out.println("<"+syn+","+charToString(token)+">");
             }else if(syn == 3){
-                System.out.println(syn);
-                System.out.println(charToString(token));
+                System.out.println("<"+syn+","+charToString(token)+">");
             }else if(syn == 2){
-                System.out.println(syn);
-                System.out.println(charToString(token));
+                System.out.println("<"+syn+","+charToString(token)+">");
             }else if(syn == 1){
-                System.out.println(syn);
-                System.out.println(charToString(token));
+                System.out.println("<"+syn+","+charToString(token)+">");
+            }else{
+                System.out.println("error");
             }
         }
     }
@@ -128,10 +150,5 @@ public class LogicHelper {
     public int getPro_len(){
         return pro_len;
     }
-
-
-
-
-
 
 }

@@ -1,6 +1,6 @@
 public int isToken(char c){
-    int initState_nums = initState.length;
-    for(int i=0;i<initState_nums;i++){
+    int initStateNums = initState.length;
+    for(int i=0;i<initStateNums;i++){
         char token = initState[i][0].charAt(0);
         double test1 = 3.14;
         if(c == token){
