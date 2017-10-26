@@ -1,6 +1,8 @@
 import org.junit.Before;
 import org.junit.Test;
 
+import java.io.IOException;
+
 import static org.junit.Assert.*;
 
 /**
@@ -27,7 +29,11 @@ public class LogicHelperTest {
 
     @Test
     public void testRun(){
-        logicHelper.run();
+        try {
+            logicHelper.run();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }

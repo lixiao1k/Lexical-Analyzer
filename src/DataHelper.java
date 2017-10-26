@@ -9,7 +9,7 @@ public class DataHelper {
     public String keyworkState[][];
     public String transState[][];
 
-    private String [] txturl = {"InitState.txt","KeyWordState.txt","TransState.txt"};
+    private String [] txturl = {"dataSource/InitState.txt","dataSource/KeyWordState.txt","dataSource/TransState.txt"};
 
     public DataHelper(){
         setInitState();

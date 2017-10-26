@@ -1,3 +1,5 @@
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -20,7 +22,7 @@ public class LogicHelper {
 
     private void initPro(){
         try {
-            ArrayList<String> pro_String_list= dataHelper.readFile("Input.txt");
+            ArrayList<String> pro_String_list= dataHelper.readFile("input/Input.txt");
             int list_len = pro_String_list.size();
             String pro_string = "";
             for(int i=0;i<list_len;i++){
@@ -126,21 +128,21 @@ public class LogicHelper {
         }
     }
 
-    public void run(){
+    public void run() throws IOException {
+        File resultFile = new File("result/Output.txt");
+        FileWriter fileWriter = new FileWriter(resultFile);
         while(p!=pro_len){
             scanner();
-            if(syn >3) {
-                System.out.println("<"+syn+","+charToString(token)+">");
-            }else if(syn == 3){
-                System.out.println("<"+syn+","+charToString(token)+">");
-            }else if(syn == 2){
-                System.out.println("<"+syn+","+charToString(token)+">");
-            }else if(syn == 1){
-                System.out.println("<"+syn+","+charToString(token)+">");
+            if(syn >0) {
+                String s = "<" + Integer.toString(syn) + "," + charToString(token) + ">"+"\n";
+                fileWriter.write(s);
+                System.out.print(s);
             }else{
+                fileWriter.write("error\n");
                 System.out.println("error");
             }
         }
+        fileWriter.close();
     }
 
     //======for test=========
